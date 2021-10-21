@@ -1,29 +1,76 @@
-$(window).scroll(function() {
+const canvas = document.querySelector('canvas')
+    , cx = canvas.getContext('2d')
 
-  // selectors
-  var $window = $(window),
-      $body = $('body'),
-      $panel = $('.panel');
+const INCREMENT = 12345
+    , MULTIPLIER = 1103515245
+    , MODULUS = Math.pow(2, 31)
 
-  // Change 33% earlier than scroll position so colour is there when you arrive.
-  var scroll = $window.scrollTop() + ($window.height() / 3);
+// Todo esto son inputs del nodo generador
+const stepX = 16
+    , stepY = 16
+    , sizeX = 1
+    , sizeY = 1
+    , marginTop = 32
+    , marginBottom = 32
+    , marginLeft = 32
+    , marginRight = 32
 
-  $panel.each(function () {
-    var $this = $(this);
+let frameID
 
-    // if position is within range of this panel.
-    // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
-    // Remember we set the scroll to 33% earlier in scroll var.
-    if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+function lcg(x, c = INCREMENT, a = MULTIPLIER, m = MODULUS) {
+  return (a * x + c) % m
+}
 
-      // Remove all classes on body with color-
-      $body.removeClass(function (index, css) {
-        return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
-      });
-
-      // Add class of currently active div
-      $body.addClass('color-' + $(this).data('color'));
+function createRandom(initialSeed = 0) {
+  let seed = initialSeed
+  return {
+    get currentSeed() {
+      return seed
+    },
+    reset(newSeed) {
+      seed = newSeed
+    },
+    get() {
+      seed = lcg(seed)
+      return seed / MODULUS
     }
-  });
+  }
+}
 
-}).scroll();
+const random = createRandom()
+
+function frame(frameTime) {
+  // First element
+  cx.clearRect(0,0,cx.canvas.width,cx.canvas.height)
+  for (let y = marginTop; y < cx.canvas.height - marginBottom; y += stepY) {
+    random.reset(y)
+    for (let x = marginLeft; x < cx.canvas.width - marginRight; x += stepX) {
+      const randomValue = random.get()
+      const distX = randomValue * 16
+      const distY = randomValue * 16
+      const phase = randomValue * Math.PI * 2
+      cx.fillStyle = '#000'
+      cx.fillRect(
+        x,
+        y,
+        sizeX + Math.sin(phase + frameTime / 1000) * distX,
+        sizeY + Math.cos(phase + frameTime / 1000) * distY
+      )
+    }
+  }
+  frameID = window.requestAnimationFrame(frame)
+}
+
+function resize() {
+  canvas.width = canvas.clientWidth
+  canvas.height = canvas.clientHeight
+}
+
+function start() {
+  window.addEventListener('resize', resize)
+  window.dispatchEvent(new Event('resize'))
+
+  frameID = window.requestAnimationFrame(frame)
+}
+
+start()
