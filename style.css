@@ -10,34 +10,125 @@
   transform: scale(1.1); /* (50% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
-.display-1{
+.red{
   color: rgb(255, 63, 56);
+  font-family: fantasy;
+  font-variant: small-caps
 }
-.lead{
+.green{
   color: rgb(55, 161, 65);
+  font-family: fantasy;
+  font-variant: small-caps
 }
-.section-title{
-  color: rgb(43, 90, 217);
+.blue{
+  color: rgb(0, 51, 153);
+  font-family: fantasy;
+  font-variant: small-caps;
 }
 .background{
   background-color: rgb(44, 47, 51);
 }
+
+.nav-item{
+  font-family: monospace;
+  font-style: normal;
+  font-variant: small-caps
+}
 .info-card{
-  background-color:#23272A;
+  background-color:transparent;
   color: white;
+  border-width: medium;
+  border-color: white;
 }
 .info-text{
   color: white;
 }
+.projects-text{
+  color: black;
+  background-color: rgba(44, 47, 51,0);
+  border-width: medium;
+}
 .list-group-item{
-  background-color: rgb(44, 47, 51);
+  background-color: rgba(44, 47, 51,0);
   color: white;
 }
 .card-body {
-  background-color: rgb(44, 47, 51);
+  background-color: rgba(44, 47, 51,0);
   color: white;
 }
 .container{
   border-width:inherit;
   border-color: white;
+}
+html {
+  height:100%;
+}
+.btn {
+  border-color: rgb(65,105,225)
+  border-weight:thin;
+  color: rgb(65,105,225);
+  text-align: center;
+  font-size: 16px;
+}
+
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #808080 50%, #36454F 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+html, body, canvas
+  width 100%
+  height 100%
+  background #ddd
+
+html, body
+  display flex
+.active:hover{
+  background: rgb(43, 90, 217);
 }
