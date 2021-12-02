@@ -1,5 +1,6 @@
 .card-text {
   font-size: 12px;
+  height: 30px;
 }
 .zoom {
   transition: transform .2s; /* Animation */
