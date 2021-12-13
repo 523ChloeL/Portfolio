@@ -7,7 +7,18 @@
   margin: 0 auto;
 }
 .card {
-  height: 275px;
+  height: 315px;
+  width: 250px;
+  margin-top: 5px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+ul > li:before {
+  content: "- ";
+  text-indent: -5px;
 }
 
 .zoom:hover {
@@ -53,10 +64,7 @@
   background-color: rgba(44, 47, 51,0);
   border-width: medium;
 }
-.list-group-item{
-  background-color: rgba(44, 47, 51,0);
-  color: white;
-}
+
 .card-body {
   background-color: rgba(44, 47, 51,0);
   color: white;

@@ -19,7 +19,6 @@ body {
 	font-size: 12px;
 	line-height:30px;
 	color:#777;
-	background:#0CF;
 }
 
 .container {
@@ -30,9 +29,11 @@ body {
 }
 
 #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
-
+h4 {
+	color: white;
+}
 #contact {
-	background:#F9F9F9;
+	background:#36454F;
 	padding:25px;
 	margin:50px 0;
 }
