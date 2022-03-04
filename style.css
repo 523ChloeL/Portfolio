@@ -35,13 +35,19 @@ ul > li.dash:before {
 }
 
 .nav-link {
+  border-color: #DA7138;
+  background-color: #DA7138;
+  text-align: center;
+  font-size: 16px;
   color: white;
   list-style: none;
 }
 .nav-link:hover{
-    background-color: #2A52BE;
-    border-radius: 5px;
-    color: white;
+  border-color: #DA7138;
+  background-color: #DA7138;
+  text-align: center;
+  font-size: 16px;
+  color: white;
 }
 .red{
   color: rgb(255, 63, 56);
@@ -53,8 +59,8 @@ ul > li.dash:before {
   font-family: fantasy;
   font-variant: small-caps
 }
-.blue{
-  color: rgb(23, 77, 255);
+.orange{
+  color: #DA7138;
   font-family: fantasy;
   font-variant: small-caps;
 }
@@ -88,14 +94,17 @@ html {
   height:100%;
 }
 .btn {
-  border-color: rgb(65,105,225)
-  border-weight:thin;
-  color: rgb(65,105,225);
+  border-color: #DA7138;
+  background-color: #DA7138;
   text-align: center;
   font-size: 16px;
   color: white;
 }
-
+.btn:hover {
+  background-color: #DA7138;
+  border-color: white;
+  color:white;
+}
 
 body {
   margin:0;
@@ -155,5 +164,16 @@ html, body, canvas
 html, body
   display flex
 .active:hover{
-  background: rgb(43, 90, 217);
+  background: #DA7138;
+  border-color: white;
+}
+.active {
+  border-color: #DA7138;
+  background-color: #DA7138;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+.nav-link:active{
+  background: #DA7138;
 }

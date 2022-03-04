@@ -2,8 +2,20 @@
   color: white;
   list-style: none;
 }
+.btn {
+  border-color: #DA7138;
+  background-color: #DA7138;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+.btn:hover {
+  background-color: #DA7138;
+  border-color: white;
+  color:white;
+}
 .nav-link:hover{
-    background-color: #2A52BE;
+    background-color: #DA7138;
     border-radius: 5px;
     color: white;
 }
@@ -17,8 +29,8 @@
   font-family: fantasy;
   font-variant: small-caps
 }
-.blue{
-  color: rgb(23, 77, 255);
+.orange{
+  color: #DA7138;
   font-family: fantasy;
   font-variant: small-caps;
 }
