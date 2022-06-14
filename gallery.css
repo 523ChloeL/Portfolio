@@ -1,0 +1,373 @@
+.body{
+  background: url('img/basketballCourt.jpg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+    margin-top:20px;
+}
+
+.navbar {
+  width: 100%;
+  background-color: black;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: red;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover{
+    font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  background-repeat:no-repeat;
+  width: 100px;
+  height: 250px;
+  z-index: -100;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: red;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 120px;
+  box-shadow: inset 0 0 5000px rgba(0, 0, 0, .9);
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+  padding-left: 50px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+.navbar .menu-items li {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+/* hamburger menu */
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+}
+footer p, li, td{
+  text-align: center;
+  font-size: 15px;
+}
+.copyright {
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+footer {
+  background-color: black;
+  font-size: 60px;
+  widows: 100%;
+  text-align: center;
+  color: red;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+
+a:hover {
+  color: red;
+  background-color: black;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+button {
+  background-color: red;
+  color: black;
+  font-size: 30px;
+  border-radius: 2px;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+.btn-size {
+  height: 65px;
+  width: 65px;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+
+button.subscribe:hover {
+  background-color: white;
+  color: red;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+button.subscribe{
+  background-color: red;
+  color: white;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+button:hover{
+  background-color: red;
+}
+.heading {
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+}
+div .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+p {
+  color: white;
+  margin: 0px;
+}
+h5 {
+  margin:0px;
+}
+
+.center {
+  display: block;
+  margin-left: 0px;
+  margin-right: 100px;
+  width: 100%;
+}
+.card-subtitle, .card-title {
+    font-weight: 400;
+}
+.card-title {
+    font-size: .875rem;
+    color: #495057;
+}
+.card {
+    margin-bottom: 24px;
+    box-shadow: 0 0 0.875rem 0 rgba(33,37,41,.05);
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: initial;
+    border: 0 solid transparent;
+    border-radius: .25rem;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+.card-header:first-child {
+    border-radius: .25rem .25rem 0 0;
+}
+.card-header {
+    border-bottom-width: 1px;
+}
+.pb-0 {
+    padding-bottom: 0!important;
+}
+.card-header {
+    padding: 1rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: 0 solid transparent;
+}
+.card-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.card-wrapper .card-img {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+}
+.card-wrapper .card-img img {
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.25rem;
+    border-radius: 0.25rem;
+}
+.card-wrapper .card-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    transform: translateX(-100%);
+    transition: 0.8s;
+    z-index: 11;
+}
+.card-wrapper:before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 100%;
+    z-index: 9;
+    transition: 0.8s;
+    background: #d10909;
+    border-radius: 0.25rem;
+}
+.card-wrapper:hover:before {
+    right: 0;
+}
+.card-wrapper h3,
+.card-wrapper p {
+    color: #fff;
+}
+.card-wrapper .read-more {
+    color: #fff;
+}
+.card-wrapper .read-more:after {
+    color: #fff;
+}
+.card-wrapper:hover .card-body {
+    visibility: visible;
+    transform: translateX(0px);
+}
+.card-wrapper:hover .backgound-color {
+    right: 0;
+}
+footer p, li, td{
+  text-align: center;
+  font-size: 15px;
+}
+.copyright {
+    font-size: 24px;
+    text-align: center;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+.container {
+  font-size: 60px;
+  widows: 100%;
+  text-align: center;
+  color: red;
+  padding: 0px;
+  margin: 0px;
+}
+footer .container {
+  background-color: black;
+}
+a:hover {
+  color: red;
+  background-color: black;
+}
+button {
+  background-color: red;
+  color: black;
+  font-size: 30px;
+  border-radius: 2px;
+}
+.btn-size {
+  height: 65px;
+  width: 65px;
+}
+button.subscribe:hover {
+  background-color: white;
+  color: red;
+}
+button.subscribe{
+  background-color: red;
+  color: white;
+}
+i {
+  color: red;
+}
