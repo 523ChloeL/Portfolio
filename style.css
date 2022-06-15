@@ -15,7 +15,6 @@
   border-radius: 5px;
 }
 
-
 ul{
   list-style-type: none;
 }
@@ -23,6 +22,7 @@ ul{
   background-color: transparent;
   color: white;
   border-color: transparent;
+  font-family: 'Patua One', cursive;
 }
 
 ul > li.dash:before {
@@ -41,6 +41,7 @@ ul > li.dash:before {
   font-size: 16px;
   color: white;
   list-style: none;
+  font-family: 'Patua One', cursive;
 }
 .nav-link:hover{
   border-color: #DA7138;
@@ -48,6 +49,7 @@ ul > li.dash:before {
   text-align: center;
   font-size: 16px;
   color: white;
+  font-family: 'Patua One', cursive;
 }
 .red{
   color: rgb(255, 63, 56);
@@ -72,14 +74,17 @@ ul > li.dash:before {
   color: white;
   border-width: medium;
   border-color: white;
+  font-family: 'Patua One', cursive;
 }
 .info-text{
   color: white;
+  font-family: 'Patua One', cursive;
 }
 .projects-text{
   color: black;
   background-color: rgba(44, 47, 51,0);
   border-width: medium;
+  font-family: 'Patua One', cursive;
 }
 
 .card-body {
@@ -99,6 +104,7 @@ html {
   text-align: center;
   font-size: 16px;
   color: white;
+  font-family: 'Patua One', cursive;
 }
 .btn:hover {
   background-color: #DA7138;
@@ -163,17 +169,19 @@ html, body, canvas
 
 html, body
   display flex
-.active:hover{
+.nav-link.active:hover{
   background: #DA7138;
   border-color: white;
 }
-.active {
+.nav-link.active {
   border-color: #DA7138;
   background-color: #DA7138;
   text-align: center;
   font-size: 16px;
   color: white;
+  font-family: 'Patua One', cursive;
 }
 .nav-link:active{
   background: #DA7138;
+  font-family: 'Patua One', cursive;
 }
